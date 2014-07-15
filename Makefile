@@ -21,8 +21,8 @@ OPT += -DUSE_MPI
 #OPT += -DVS
 
 #--------------------------------------- CUDA options
-OPT += -DCUDA
-OPT += -DHYPERQ
+#OPT += -DCUDA
+#OPT += -DHYPERQ
 
 #--------------------------------------- OpenCL options
 #OPT += -DOPENCL
@@ -65,8 +65,8 @@ ifeq ($(SYSTYPE),"generic")
 
 # Generic 64bit cuda setup
 ifeq (CUDA,$(findstring CUDA,$(OPT)))
-NVCC       =  nvcc -g 
-CUDA_HOME  =  /opt/cuda
+NVCC       =  nvcc -g -arch sm_35 -use_fast_math
+CUDA_HOME  =  $(CUDATK)
 LIB_OPT  += -L$(CUDA_HOME)/lib64 -lcudart
 SUP_INCL += -I$(CUDA_HOME)/include
 endif
@@ -74,7 +74,7 @@ endif
 endif
 
 # OpenMP compiler switch
-#OMP      = -fopenmp
+OMP      = -fopenmp
 
 SUP_INCL = -I. -Icxxsupport -Ic_utils
 
