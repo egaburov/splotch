@@ -35,7 +35,7 @@ OPT += -DHYPERQ
 #OPT += -DNO_I_NORM
 
 #--------------------------------------- Select target Computer
-#SYSTYPE="generic"
+SYSTYPE="generic"
 #SYSTYPE="mac"
 #SYSTYPE="SP6"
 #SYSTYPE="GP"
@@ -43,13 +43,11 @@ OPT += -DHYPERQ
 #SYSTYPE="BGP"
 #SYSTYPE="VIZ"
 #SYSTYPE="EIGER"
-SYSTYPE="TODI"
+#SYSTYPE="TODI"
 ### visualization cluster at the Garching computing center (RZG):
 #SYSTYPE="RZG-SLES11-VIZ"
 ### generic SLES11 Linux machines at the Garching computing center (RZG):
 #SYSTYPE="RZG-SLES11-generic"
-
-
 
 
 # Set compiler executables to commonly used names, may be altered below!
