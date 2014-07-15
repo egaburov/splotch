@@ -3,13 +3,13 @@
 #######################################################################
 
 #--------------------------------------- Switch on Previewer
-#OPT += -DPREVIEWER
+OPT += -DPREVIEWER
 
 #--------------------------------------- Switch on DataSize
 #OPT += -DLONGIDS
 
 #--------------------------------------- Switch on MPI
-OPT += -DUSE_MPI
+#OPT += -DUSE_MPI
 #OPT += -DUSE_MPIIO
 
 #--------------------------------------- Switch on HDF5
@@ -242,6 +242,7 @@ OBJS  =	kernel/transform.o cxxsupport/error_handling.o \
 	      cxxsupport/mpi_support.o cxxsupport/paramfile.o cxxsupport/string_utils.o \
 	      cxxsupport/announce.o cxxsupport/ls_image.o reader/gadget_reader.o \
 	      reader/millenium_reader.o reader/bin_reader.o reader/bin_reader_mpi.o reader/tipsy_reader.o \
+				reader/bonsai_reader.o \
 	      splotch/splotchutils.o splotch/splotch.o \
 	      splotch/scenemaker.o splotch/splotch_host.o cxxsupport/walltimer.o c_utils/walltime_c.o \
 	      booster/mesh_creator.o booster/randomizer.o booster/p_selector.o booster/m_rotation.o \
