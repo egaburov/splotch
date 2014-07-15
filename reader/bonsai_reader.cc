@@ -33,7 +33,7 @@
 
 using namespace std;
 
-void tipsy_reader (paramfile &params, vector<particle_sim> &points)
+void bonsai_reader (paramfile &params, vector<particle_sim> &points)
 {
 
   float smooth_factor = params.find<float>("smooth_factor",1.0);
